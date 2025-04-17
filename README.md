@@ -1,44 +1,43 @@
-# robot_classifier
-Machine learning classifier for motor imagery.
+# InMoov Prosthetic Control – EEG-Driven Adaptive Learning System
 
-## Structure
+This project integrates EEG-based movement classification, real-time prosthetic control, continuous learning through feedback, and vision-based grasp validation using ROS2.
 
-``
+## Project Structure
+
+``bash
 inmoov_prosthetic_eeg/
-│
-├── README.md
-├── requirements.txt
-├── setup.sh
-├── config/
-│   └── eeg_config.yaml
 │
 ├── data/
 │   └── motor_imagery/
-│       └── raw/
-│       └── preprocessed/
+│       └── raw/                     # Raw EEG data (optional)
+│       └── preprocessed/            # Numpy files: X.npy and y.npy
 │
-├── eeg/
-│   ├── collect_data.py
-│   ├── preprocess.py
-│   ├── train_classifier.py
-│   └── model.py
+├── neuroscience/
+│   ├── eeg_model/
+│   │   ├── model.py                 # EEGNetAdvanced with attention + depthwise conv
+│   │   ├── train_classifier.py      # Full training pipeline
+│   │   ├── online_learning.py       # Incremental model update using feedback
+│   │
+│   ├── live_prediction/
+│   │   └── predictor.py             # Real-time EEG classifier with correction interface
+│   │
+│   ├── feedback/
+│   │   └── correction_logger.py     # Logs user corrections in NPZ file
+│   │
+│   ├── utils/
+│   │   └── signal_processing.py     # Simulated EEG + filters
+│   │
+│   └── setup.sh                     # Setup script for dependencies
 │
-├── firmware/
-│   └── arduino_inmoov_controller.ino
+├── computer_vision/                # Your grasp and detection modules (CV_PATH)
+│   ├── main.py
+│   ├── grasp_validation.py
+│   ├── grasp_identifier.py
+│   ├── object_detection.py
+│   ├── hand_landmarks.py
+│   └── CONST.py
 │
-├── prosthetic_control/
-│   ├── live_eeg_predict.py
-│   └── actuator_interface.py
-│
-├── ros2_integration/
-│   ├── launch/
-│   └── nodes/
-│       ├── eeg_node.py
-│       └── motor_control_node.py
-│
-├── notebooks/
-│   └── exploratory_analysis.ipynb
-│
-└── utils/
-    └── signal_processing.py
+├── robotics/                       # For ROS2 and Arduino communication (ROBOTICS_PATH)
+│   ├── ROS2_node.py                # EEG movement ROS2 publisher
+│   └── arduino_servo_control.ino   # Servo command listener on Arduino
 ``
