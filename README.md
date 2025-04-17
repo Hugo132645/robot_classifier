@@ -4,7 +4,7 @@ This project integrates EEG-based movement classification, real-time prosthetic 
 
 ## Project Structure
 
-``bash
+bash ``
 inmoov_prosthetic_eeg/
 │
 ├── data/
