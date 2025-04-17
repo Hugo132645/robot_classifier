@@ -6,19 +6,19 @@ This project integrates EEG-based movement classification, real-time prosthetic 
 
 ## Table of Contents
 
-1. [Overview](#-inmoov-prosthetic-control--eeg-driven-adaptive-learning-system)
-2. [Project Structure](#-project-structure)
-3. [Getting Started](#-getting-started)
+1. [Overview](#inmoov-prosthetic-control--eeg-driven-adaptive-learning-system)
+2. [Project Structure](#project-structure)
+3. [Getting Started](#getting-started)
     - [Install Dependencies](#1-install-dependencies)
     - [Train the Classifier](#2-train-the-classifier)
     - [Real-Time EEG Prediction](#3-predict-movements-in-real-time)
     - [Update Classifier with Feedback](#4-improve-the-classifier-from-feedback)
-4. [EEG Model Details](#-model-highlights)
-5. [Integrated Movements](#-integrated-movements)
-6. [Vision System Modules](#-vision-modules-explained)
-7. [ROS2 Communication](#-ros2-integration)
-8. [Contributing](#-contributing)
-9. [License](#-license)
+4. [Model Highlights](#model-highlights)
+5. [Integrated Movements](#integrated-movements)
+6. [Vision Modules Explained](#vision-modules-explained)
+7. [ROS2 Integration](#ros2-integration)
+8. [Contributing](#contributing)
+9. [License](#license)
 
 ---
 
