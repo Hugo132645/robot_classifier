@@ -3,6 +3,7 @@ Machine learning classifier for motor imagery.
 
 ## Structure
 
+``
 inmoov_prosthetic_eeg/
 │
 ├── README.md
@@ -40,3 +41,4 @@ inmoov_prosthetic_eeg/
 │
 └── utils/
     └── signal_processing.py
+``
